@@ -1,4 +1,10 @@
-<?php include('include/header.php');?>
+<?php include_once('include/header.php');
+      include_once "include/config.php";
+$db = new Database;
+$sql = mysqli_query($db->getConnection(),"SELECT pr.*,ph.path,ph.isCover FROM `properties` as pr inner join photos as ph on pr.id = ph.property ORDER BY id ASC");
+  $location =  @$_GET['location'] ;
+  
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +19,8 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="css/mdb.min.css" rel="stylesheet">
+  <script src='select2/dist/js/select2.min.js' type='text/javascript'></script>
+  <link href='select2/dist/css/select2.min.css' rel='stylesheet' type='text/css'>
   <!-- Your custom styles (optional) -->
   <link href="css/style.min.css" rel="stylesheet">
   <style type="text/css">
@@ -27,51 +35,9 @@
   <main>
     <div class="container">
 
-      <!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
 
-        <!-- Navbar brand -->
-        <span class="navbar-brand">Categories:</span>
-
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="basicExampleNav">
-
-          <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">All
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Location</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Size</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Price</a>
-            </li>
-
-          </ul>
-          <!-- Links -->
-
-          <form class="form-inline">
-            <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-          </form>
-        </div>
-        <!-- Collapsible content -->
-
-      </nav>
-      <!--/.Navbar-->
+         <hr class="my-5">
+         <?php include ('include/searching.php'); echo $location;?>
 
       <!--Section: Products v.3-->
       <section class="text-center mb-4">
@@ -79,204 +45,49 @@
         <!--Grid row-->
         <div class="row wow fadeIn">
 
+    <?php while($row = mysqli_fetch_assoc($sql)) {
+      $imagePath = $row['path'];
+     ?>
           <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-md-6 mb-4">
 
             <!--Card-->
             <div class="card">
 
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="assets/images/property-1.jpg" class="card-img-top"
-                  alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--Card image-->
+                <!--Card image-->
+                <div class="view overlay">
+                 
+                   <img src="<?=$imagePath?>" alt="No Image " class="card-img-top">
+                    <a href="properties.php">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                
+                </div>
 
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="product.php" class="dark-grey-text">
-                  <h5>Ruiru</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="product.php" class="dark-grey-text">Prime Plots
-                      <span class="badge badge-pill danger-color">NEW</span>
+                <!--Card content-->
+                <div class="card-body">
+                  <!--Title-->
+                  <h4 class="card-title"><?=$row['name'];?></h4>
+                  <a href= "properties.php">
+                  <!--Text-->
+                                <p class="card-text">
+                    <strong><?=$row['description'];?></strong>
+                  </p>
                     </a>
-                  </strong>
-                </h5>
-
-                      </div>
-              <!--Card content-->
+              </div>
 
             </div>
-            <!--Card-->
+            <!--/.Card-->
 
           </div>
           <!--Grid column-->
-
+    <?php } ?>
           <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4">
-
-            <!--Card-->
-            <div class="card">
-
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="assets/images/property-2.jpg" class="card-img-top"
-                  alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--Card image-->
-
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="product.php" class="dark-grey-text">
-                  <h5>Kitengela</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="product.php" class="dark-grey-text">Plots</a>
-                  </strong>
-                </h5>
-
-                             </div>
-              <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4">
-
-            <!--Card-->
-            <div class="card">
-
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="assets/images/property-3.jpg" class="card-img-top"
-                  alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--Card image-->
-
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="product.php" class="dark-grey-text">
-                  <h5>Juja farm</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="product.php" class="dark-grey-text">Prime prime!!
-                      <span class="badge badge-pill primary-color">bestseller</span>
-                    </a>
-                  </strong>
-                </h5>
-
-                             </div>
-              <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-          </div>
-          <!--Grid column-->
-
-          <!--Fourth column-->
-          <div class="col-lg-3 col-md-6 mb-4">
-
-            <!--Card-->
-            <div class="card">
-
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="assets/images/property-3.jpg" class="card-img-top"
-                  alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--Card image-->
-
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="product.php" class="dark-grey-text">
-                  <h5>Kamulu</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="product.php" class="dark-grey-text">Plots</a>
-                  </strong>
-                </h5>
-
-                           </div>
-              <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-          </div>
-          <!--Fourth column-->
-
-        </div>
-        <!--Grid row-->
-
-        <!--Grid row-->
-        <div class="row wow fadeIn">
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4">
-
-            <!--Card-->
-            <div class="card">
-
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="assets/images/property-4.jpg" class="card-img-top"
-                  alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--Card image-->
-
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="product.php" class="grey-text">
-                  <h5>Komarock</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href=" product.php" class="dark-grey-text">Prime plots
-                      <span class="badge badge-pill danger-color">NEW</span>
-                    </a>
-                  </strong>
-                </h5>
-
-              </div>
-              <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-          </div>
-          <!--Grid column-->
-
           
+
+        </div>          <!--Grid column-->
+
+         
 
       </section>
       <!--Section: Products v.3-->
@@ -340,7 +151,24 @@
   <script type="text/javascript">
     // Animations initialization
     new WOW().init();
+  $(document).ready(function(){
+ 
+  // Initialize select2
+  //$("#selUser").select2();
+  $("#selUser").on('change',function(){
+    console.log("selected");
+    window.location.href="properties.php?location="+$("#selUser").val();
+  });
 
+  // Read selected option
+  $('#but_read').click(function(){
+    var username = $('#selUser option:selected').text();
+    var userid = $('#selUser').val();
+
+    $('#result').html("id : " + userid + ", name : " + username);
+
+  });
+}); 
   </script>
 </body>
 

@@ -1,312 +1,155 @@
 <?php include('include/header.php');?>
-<!-- main header end -->
 
-<!-- Sub banner start -->
-<div class="sub-banner overview-bgi">
-    <div class="container">
-        <div class="breadcrumb-area">
-            <h1>About Us</h1>
-            <ul class="breadcrumbs">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">About Us</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- Sub banner end -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login to Plotipap Investment</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 
-<!-- About us start -->
-<div class="about-us content-area-8 bg-white">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+  <link href="css/mdb.min.css" rel="stylesheet">
+ 
+  <link href="css/style.min.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <main class="mt-5 pt-5">
     <div class="container">
+
+      <!--Section: Post-->
+      <section class="mt-4">
+
+        <!--Grid row-->
         <div class="row">
-            <div class="col-lg-5">
-                <div class="properties-service-v">
-                    <img src="assets/img/admin.png" alt="admin" class="img-fluid">
-                </div>
+
+          <!--Grid column-->
+          <div class="col-md-8 mb-4">
+
+            <!--Featured Image-->
+            <div class="card mb-4 wow fadeIn">
+
+              <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg" class="img-fluid" alt="">
+
             </div>
-            <div class="col-lg-7 align-self-center">
-                <div class="about-text more-info">
-                    <h3>Why Choose Us?</h3>
-                    <div id="faq" class="faq-accordion">
-                        <div class="card m-b-0">
-                            <div class="card-header">
-                                <a class="card-title collapsed" data-toggle="collapse" data-parent="#faq" href="#collapse1">
-                                    Impeccable Customer Service
-                                </a>
-                            </div>
-                            <div id="collapse1" class="card-block collapse">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tincidunt aliquam. Aliquam gravida massa at sem vulputate interdum et vel eros. Maecenas eros enim, tincidunt vel turpis vel, dapibus tempus nulla. Donec vel nulla dui. Pellentesque sed ante sed ligula hendrerit condimentum. Suspendisse rhoncus fringilla ipsum.</p>
-                            </div>
+            <div class="card mb-4 wow fadeIn">
 
-                            <div class="card-header">
-                                <a class="card-title collapsed" data-toggle="collapse" data-parent="#faq" href="#collapse2">
-                                    Worldwide charity programs
-                                </a>
-                            </div>
-                            <div id="collapse2" class="card-block collapse">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tincidunt aliquam. Aliquam gravida massa at sem vulputate interdum et vel eros. Maecenas eros enim, tincidunt vel turpis vel, dapibus tempus nulla. Donec vel nulla dui. Pellentesque sed ante sed ligula hendrerit condimentum. Suspendisse rhoncus fringilla ipsum.</p>
-                            </div>
+              <!--Card content-->
+              <div class="card-body text-left">
 
-                            <div class="card-header">
-                                <a class="card-title collapsed" data-toggle="collapse" data-parent="#faq" href="#collapse3">
-                                    Honesty and integrity
-                                </a>
-                            </div>
-                            <div id="collapse3" class="card-block collapse">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tincidunt aliquam. Aliquam gravida massa at sem vulputate interdum et vel eros. Maecenas eros enim, tincidunt vel turpis vel, dapibus tempus nulla. Donec vel nulla dui. Pellentesque sed ante sed ligula hendrerit condimentum. Suspendisse rhoncus fringilla ipsum.</p>
-                            </div>
+                <p class="h5 my-0">Who are XXX Property Managment?</p>
 
-                            <div class="card-header bd-none">
-                                <a class="card-title collapsed" data-toggle="collapse" data-parent="#faq" href="#collapse4">
-                                    Online donation system with different methods
-                                </a>
-                            </div>
-                            <div id="collapse4" class="card-block collapse">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tincidunt aliquam. Aliquam gravida massa at sem vulputate interdum et vel eros. Maecenas eros enim, tincidunt vel turpis vel, dapibus tempus nulla. Donec vel nulla dui. Pellentesque sed ante sed ligula hendrerit condimentum. Suspendisse rhoncus fringilla ipsum.</p>
-                            </div>
-                        </div>
+                <p>XXX Property management and real estate is a limited liability company duly registered under the republic of Kenya under the companies Act. The company was registered in 2010 and incorporated as a Limited Company in February 2014. Our mission is to empower Kenyans be creating value in their fianances. We are known for being trustworthy and maintaining professioanlism in all our business transactions</p>
+
+                <h5 class="my-2">
+                  <strong>Trusted by over 200,000 Kenyans who have found value in us</strong>
+                </h5>
+
+            </div>
+             <div class="card mb-4 wow fadeIn">
+              <!--Card content-->
+              <div class="card-body">
+
+                <p class="h5 my-0">What makes us Unique </p>
+                <p> Over the years we have remained dedicated to our vision and mission of being the provider of choice in land/property ownership in the region. Our Vision is to empower many Kenyans by helping them acquire genuine and quality land/property at an affordable price.</p>
+
+                <blockquote class="blockquote">
+                  <footer class="blockquote-footer">Core values: God fearing, Respect, Honesty, Delivering on Promises, Professionalism, Integrity  .</footer>
+                
+                </blockquote>
+
+                <p>At XXX property management and real estate we have enjoyed tremendous growth and success by carefully investing in the right real estate opportunities and properties with the right people. Through our able team of professionals, we have been able to create more than 3000 land and home owners with a footprint network of 17 local branches across the country and 2 diaspora branches.</p>
+
+                <p> We help you invest now for your future and make your money work for you.  With a good foundation in Christianity, having God as our Senior Most Partner, and our unparalleled team of qualified staff, we take pride in the ability to provide exceptional services to our clients.</p>
+
+              </div>
+
+            </div>
+            <div class="card mb-4 wow fadeIn">
+
+              <div class="card-header font-weight-bold">
+                <span>Testmonies</span>
+                <span class="pull-right">
+                  <a href="">
+                    <i class="fab fa-facebook-f mr-2"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter mr-2"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram mr-2"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-linkedin-in mr-2"></i>
+                  </a>
+                </span>
+              </div>
+          </div>
+          <div class="card-body">
+
+                <div class="media d-block d-md-flex mt-3">
+                  <img class="d-flex mb-3 mx-auto z-depth-1" src="http://localhost/plotipap/assets/images/profile.jpg"
+                    alt="Generic placeholder image" style="width: 100px;">
+                  <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                    <h5 class="mt-0 font-weight-bold">John Maina
+                    </h5>
+                    With XXX property management and real estate, I have acquired all lands conveniently with ready title deeds. The best thing about the company is that the online transaction is as secure as face-to-face transactions. They are honest with all their dealings. I will continue using the company for a better future.
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <!--/.Card-->
+
+           <div class="col-md-left mb-2">
+
+                        <div class="card mb-2 wow fadeIn">
+
+              <div class="card-header">Related articles</div>
+
+              <!--Card content-->
+              <div class="card-body">
+
+                <ul class="list-unstyled">
+                  <li class="media">
+                    <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg" alt="Generic placeholder image">
+                    <div class="media-body">
+                      <a href="#">
+                        <h5 class="mt-0 mb-1 font-weight-bold">Knowing your property worth</h5>
+                      </a>
+                      Real estate is a drastically changing field (...)
                     </div>
-                </div>
+                  </li>
+                  <li class="media my-4">
+                    <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder6.jpg" alt="An image">
+                    <div class="media-body">
+                      <a href="#">
+                        <h5 class="mt-0 mb-1 font-weight-bold">Avoiding being scammed</h5>
+                      </a>
+                      Buy from a trustworthy agent(...)
+                    </div>
+                  </li>
+                 </ul>
+
+              </div>
+
             </div>
+            <!--/.Card-->
+
+          </div>
+          <!--Grid column-->
+
         </div>
-    </div>
-</div>
-<!-- About us end -->
 
-<!-- agent start -->
-<div class="agent content-area-2">
-    <div class="container">
-        <div class="main-title">
-            <h1>Meet Our Agents</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="agent-2">
-                    <div class="agent-photo">
-                        <a href="#">
-                            <img src="assets/img/avatar/avatar-5.jpg" alt="avatar-5" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="agent-details">
-                        <h5><a href="#">Martin Smith</a></h5>
-                        <p>Web Developer</p>
-                        <ul class="social-list clearfix">
-                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="agent-2">
-                    <div class="agent-photo">
-                        <a href="#">
-                            <img src="assets/img/avatar/avatar-6.jpg" alt="avatar-6" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="agent-details">
-                        <h5><a href="#">John Pitarshon</a></h5>
-                        <p>Creative Director</p>
-                        <ul class="social-list clearfix">
-                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="agent-2">
-                    <div class="agent-photo">
-                        <a href="#">
-                            <img src="assets/img/avatar/avatar-7.jpg" alt="avatar-7" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="agent-details">
-                        <h5><a href="#">Maria Blank</a></h5>
-                        <p>Office Manager</p>
-                        <ul class="social-list clearfix">
-                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="agent-2">
-                    <div class="agent-photo">
-                        <a href="#">
-                            <img src="assets/img/avatar/avatar-11.jpg" alt="avatar-11" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="agent-details">
-                        <h5><a href="#">Karen Paran</a></h5>
-                        <p>Support Manager</p>
-                        <ul class="social-list clearfix">
-                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div >
-<!-- agent end -->
+        
+    </section> 
+</main>
+  </body>
+  <?php include ('include/footer.php'); ?>
+  </html>
+    
 
-<!-- Counters start -->
-<div class="counters overview-bgi" style="background-image: url(assets/img/bg-photo-2.jpg)">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6">
-                <div class="counter-box">
-                    <i class="flaticon-tag"></i>
-                    <h1 class="counter">500</h1>
-                    <h5>Lines of Sale</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
-                <div class="counter-box">
-                    <i class="flaticon-badge"></i>
-                    <h1 class="counter">254</h1>
-                    <h5>Listings For Rent</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
-                <div class="counter-box">
-                    <i class="flaticon-call-center-agent"></i>
-                    <h1 class="counter">510</h1>
-                    <h5>Agents</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
-                <div class="counter-box">
-                    <i class="flaticon-job"></i>
-                    <h1 class="counter">94</h1>
-                    <h5>Brokers</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Counters end -->
-
-<!-- Testimonial 3 start -->
-<div class="testimonial testimonial-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="testimonial-inner">
-                    <header class="testimonia-header">
-                        <h1>Testimonial</h1>
-                    </header>
-                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <p class="lead">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                </p>
-                                <div class="avatar">
-                                    <img src="assets/img/avatar/avatar-2.jpg" alt="avatar-2" class="img-fluid rounded">
-                                </div>
-                                <ul class="rating">
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star-half-full"></i>
-                                    </li>
-                                </ul>
-                                <div class="author-name">
-                                    John Antony
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <p class="lead">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                </p>
-                                <div class="avatar">
-                                    <img src="assets/img/avatar/avatar.jpg" alt="avatar" class="img-fluid rounded">
-                                </div>
-                                <ul class="rating">
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star-half-full"></i>
-                                    </li>
-                                </ul>
-                                <div class="author-name">
-                                    Martin Smith
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <p class="lead">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                </p>
-                                <div class="avatar">
-                                    <img src="assets/img/avatar/avatar-3.jpg" alt="avatar-3" class="img-fluid rounded">
-                                </div>
-                                <ul class="rating">
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star-half-full"></i>
-                                    </li>
-                                </ul>
-                                <div class="author-name">
-                                    Karen Paran
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial 3 end -->
-
-<!-- Footer start -->
-<?php include('include/footer.php');?>
+                      

@@ -1,3 +1,10 @@
+<?php
+    include_once "config.php";
+    $database = new Database;
+    $query = 
+    mysqli_query($database->getConnection(),"SELECT name FROM properties GROUP BY name");
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -22,6 +29,7 @@
     <link type="text/css" rel="stylesheet" href="assets/css/slick.css">
     <link type="text/css" rel="stylesheet" href="assets/css/slick-theme.css">
     <link type="text/css" rel="stylesheet" href="assets/css/map.css">
+    <link rel= "stylesheet" href="assets/style.css">
     <link type="text/css" rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
     <link type="text/css" rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="assets/fonts/flaticon/font/flaticon.css">
@@ -36,6 +44,18 @@
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" id="style_sheet" href="assets/css/skins/default.css">
 
+    <style>
+        .navbar{
+            background-color: #56a48b;   
+
+        }
+        li>a{
+            color: white !important;
+        }
+        li>a:hover{
+            color: black !important;
+        }
+    </style>
 </head>
 <body id="top">
 <!-- Google Tag Manager (noscript) -->
@@ -49,7 +69,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <nav class="navbar navbar-expand-lg navbar-light rounded">
+                <nav class="navbar fixed-top navbar-expand-lg navbar-white scrolling-navbar">
                     <a class="navbar-brand logo navbar-brand d-flex w-50 mr-auto" href="index.php">
                         <img src="assets/images/black-logo" alt="">
 
@@ -57,34 +77,37 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="fa fa-bars"></span>
                     </button>
-                    <div class="navbar-collapse collapse w-100" id="navbar">
-                        <ul class="navbar-nav ml-auto">
-						  
-						    <li class="nav-item dropdown active">
-                                <a class="nav-link dropdown-toggle" href="index.php">Home</a>
-                            </li>
-							
-							<li class="nav-item dropdown megamenu-li">
-                                <a class="nav-link dropdown-toggle" href="about.php">About</a>
-                            </li>
-							
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="properties.php">Properties</a>
-                            </li>
-							                                                        
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="contact.php">Contact</a>
-                            </li>
-                            
-							<li class="nav-item dropdown">
-                                <a href="#full-page-search" class="nav-link">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </li>
-                            
-													
-                        </ul>
-                    </div>
+                     <ul class="nav nav-tabs mt-3">
+        <li class="nav-item text-white">
+            <a href="index.php" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item dropdown text-white">
+            <a href="properties.php" class="nav-link">Properties</a>
+     
+        </li>
+        <li class="nav-item dropdown text-white">
+            <a href="about.php" class="nav-link dropdown-toggle" data-toggle="dropdown">About Us</a>
+            <div class="dropdown-menu">
+                <a href="about.php" class="dropdown-item">Who We are</a>
+                <a href="#" class="dropdown-item">Why Us</a>
+                <a href="#" class="dropdown-item">Our agents</a>
+                
+                </div>
+            </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">Contact Us</a>
+                <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Ruiru Branch</a>
+                <a href="#" class="dropdown-item">Nairobi CBD</a>
+           
+                </div> 
+                 </li>
+                 <li>
+                     <input type="text" class="form-control" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+
+                 </li>
+             </ul>
+
                 </nav>
             </div>
         </div>

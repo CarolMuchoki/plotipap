@@ -6214,7 +6214,7 @@ a.close.disabled {
 }
 
 .carousel {
-  position: relative;
+  position: absolute;
 }
 
 .carousel.pointer-event {
@@ -6238,7 +6238,10 @@ a.close.disabled {
   position: relative;
   display: none;
   float: left;
+  left: 60%
+  top:120%;
   width: 100%;
+  padding: 1%
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;

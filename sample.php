@@ -1,17 +1,5 @@
-<?php include('include/header.php');
-include_once "include/config.php"; 
-if(!isset($_GET['property'])){
-  die("Error");
-}
-$propertyId = $_GET['property'];
-$db = new Database;
-$data = mysqli_query($db->getConnection(),"
-  SELECT A.*, B.property, C.description,C.additional_info, C.id FROM units A LEFT JOIN sections B ON B.id=A.section LEFT JOIN properties C ON C.id = B.property  WHERE C.Id = $propertyId");
 
-$coverImage = mysqli_query($db->getConnection(),"SELECT * FROM photos WHERE isCover = 1 AND property = $propertyId");
-$otherImages = mysqli_query($db->getConnection(),"SELECT * FROM photos WHERE property = $propertyId");
-
-?>
+<?php include('include/header.php');?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,25 +21,19 @@ $otherImages = mysqli_query($db->getConnection(),"SELECT * FROM photos WHERE pro
 <body>
 
   
-  
+
   <!--Main layout-->
   <main class="mt-5 pt-4">
     <div class="container dark-grey-text mt-5">
 
       <!--Grid row-->
       <div class="row wow fadeIn">
-        <?php
-        if ($info = mysqli_fetch_assoc($data)){
-             $addInfo= $info['additional_info'];
 
-
-          ?>
         <!--Grid column-->
         <div class="col-md-6 mb-4">
-          <?php if($img = mysqli_fetch_assoc($coverImage)) {
-             $imagePath = $img['path']; ?>
-          <img src="<?=$imagePath?>" class="img-fluid" alt="">
-        <?php } ?>
+
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg" class="img-fluid" alt="">
+
         </div>
         <!--Grid column-->
 
@@ -63,26 +45,36 @@ $otherImages = mysqli_query($db->getConnection(),"SELECT * FROM photos WHERE pro
 
             <div class="mb-3">
               <a href="">
-                <span class="badge purple mr-1">Check Status</span>
+                <span class="badge purple mr-1">Category 2</span>
               </a>
-             
-              </div>
+              <a href="">
+                <span class="badge blue mr-1">New</span>
+              </a>
+              <a href="">
+                <span class="badge red mr-1">Bestseller</span>
+              </a>
+            </div>
 
             <p class="lead">
-              <span><?=$info['cost'];?></span>
+              <span class="mr-1">
+                <del>$200</del>
+              </span>
+              <span>$100</span>
             </p>
 
-            <p class="lead font-weight-bold"><?=$info['description'];?></p>
+            <p class="lead font-weight-bold">Description</p>
 
-        
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolor suscipit libero eos atque quia ipsa
+              sint voluptatibus!
+              Beatae sit assumenda asperiores iure at maxime atque repellendus maiores quia sapiente.</p>
 
-            <form class="d-flex justify-content-left" method="post" action="unit.php">
+            <form class="d-flex justify-content-left">
               <!-- Default input -->
-             <input type="hidden"
-            name="id"
-            value="0">
+              <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
 			  <div class = "button-wrapper">
-      			  <a button class="btn btn-primary btn-md my-0 p" type="submit" href = "unit.php?id=<?=$propertyId?>" >View Sections		 
+      			  <a button class="btn btn-primary btn-md my-0 p" type="submit" href = "checkout.php" >Add to cart
+                <i class="fas fa-shopping-cart ml-1"></i>
+				 
 				   </a>
 				   </div>
 			
@@ -93,10 +85,6 @@ $otherImages = mysqli_query($db->getConnection(),"SELECT * FROM photos WHERE pro
           <!--Content-->
 
         </div>
-
-    <?php } if(mysqli_num_rows($data) == 0){ ?>
-      <h1>Not Found !</h1>
-    <?php }  ?>
         <!--Grid column-->
 
       </div>
@@ -108,13 +96,13 @@ $otherImages = mysqli_query($db->getConnection(),"SELECT * FROM photos WHERE pro
       <div class="row d-flex justify-content-center wow fadeIn">
 
         <!--Grid column-->
-       
         <div class="col-md-6 text-center">
-         
 
           <h4 class="my-4 h4">Additional information</h4>
 
-          <p><?=$addInfo;?></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit modi sapiente illo soluta odit
+            voluptates,
+            quibusdam officia. Neque quibusdam quas a quis porro? Molestias illo neque eum in laborum.</p>
 
         </div>
         <!--Grid column-->
@@ -125,26 +113,33 @@ $otherImages = mysqli_query($db->getConnection(),"SELECT * FROM photos WHERE pro
       <!--Grid row-->
       <div class="row wow fadeIn">
 
-  <?php while ($img=mysqli_fetch_assoc($otherImages)){
-        $pic = $img['path'];
-     
-       ?>
         <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-4">
 
-
-          <img src="<?= $pic?>" height="233.33px" width="350px" alt="">
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
 
         <!--Grid column-->
-       
+        <div class="col-lg-4 col-md-6 mb-4">
+
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="">
+
+        </div>
         <!--Grid column-->
-<?php } ?>
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
       </div>
       <!--Grid row-->
- 
+
     </div>
   </main>
   <!--Main layout-->
@@ -166,8 +161,19 @@ $otherImages = mysqli_query($db->getConnection(),"SELECT * FROM photos WHERE pro
   <script type="text/javascript">
     // Animations initialization
     new WOW().init();
-
   </script>
 </body>
 
 </html>
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
