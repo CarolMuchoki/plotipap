@@ -1,6 +1,7 @@
 <?php include('include/user.php') ?>
 
-<?php include ('include/header.php')?>
+<?php include_once ('include/header.php')?>
+
 <!DOCTYPE html>
 <html>
 <head>
